@@ -1,0 +1,58 @@
+"use client";
+import { rightImg, watchImg } from "@/utils";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import Image from "next/image";
+import React from "react";
+
+const Highlights = () => {
+    useGSAP(() => {
+        gsap.to("#title", {
+            opacity: 1,
+            y: 0,
+        });
+        gsap.to(".link", {
+            opacity: 1,
+            y: 0,
+        });
+    }, []);
+
+    return (
+        <section
+            id="#highlights"
+            className="w-screen overflow-hidden h-full common-padding bg-zinc-900"
+        >
+            <div className="screen-max-width">
+                <div className="mb-12 w-full items-end justify-between">
+                    <h1 id="title" className="section-heading">
+                        Get the highlights.
+                    </h1>
+                    <div className="flex flex-wrap items-end gap-5">
+                        <p className="link">
+                            Watch the film
+                            <Image
+                                src={watchImg}
+                                alt="Watch"
+                                width={18}
+                                height={18}
+                                className="ml-2"
+                            />
+                        </p>
+                        <p className="link">
+                            Watch the event
+                            <Image
+                                src={rightImg}
+                                alt="Right"
+                                width={8}
+                                height={8}
+                                className="ml-2"
+                            />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Highlights;
