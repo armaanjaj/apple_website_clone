@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import React from "react";
-import VideoCarousel from "./VideoCarousel"
+import VideoCarousel from "./VideoCarousel";
 
 const Highlights = () => {
     useGSAP(() => {
@@ -16,13 +16,13 @@ const Highlights = () => {
             opacity: 1,
             y: 0,
             duration: 1,
-            stagger: 0.25
+            stagger: 0.25,
         });
     }, []);
 
     return (
         <section
-            id="#highlights"
+            id="highlights"
             className="w-screen overflow-hidden h-full common-padding bg-zinc-900"
         >
             <div className="screen-max-width">
