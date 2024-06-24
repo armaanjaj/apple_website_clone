@@ -48,7 +48,7 @@ const Features = () => {
     }, []);
 
     return (
-        <section className="h-full common-padding bg-zinc relative overflow-hidden">
+        <section className="h-full common-padding bg-zinc-900 relative overflow-hidden">
             <div className="screen-max-width">
                 <div className="mb-12 w-full">
                     <h1 id="features_title" className="section-heading">
@@ -66,12 +66,12 @@ const Features = () => {
                         </h2>
                     </div>
 
-                    <div className="flex-center flex-col sm:px-10">
+                    <div className="flex-center gap-5 flex-col sm:px-10">
                         <div className="relative h-[50vh] w-full flex items-center">
                             <video
                                 playsInline
                                 id="exploreVideo"
-                                className="w-full h-full object-cover object-center"
+                                className="w-full h-full object-cover object-center rounded-xl"
                                 preload="none"
                                 muted
                                 autoPlay
@@ -83,14 +83,14 @@ const Features = () => {
 
                         <div className="flex flex-col w-full relative">
                             <div className="feature-video-container">
-                                <div className="overflow-hidden flex-1 h-[50vh]">
+                                <div className="overflow-hidden flex-1 h-[50vh] rounded-xl">
                                     <img
                                         src={explore1Img}
                                         alt="titanium"
                                         className="feature-video g_grow"
                                     />
                                 </div>
-                                <div className="overflow-hidden flex-1 h-[50vh]">
+                                <div className="overflow-hidden flex-1 h-[50vh] rounded-xl">
                                     <img
                                         src={explore2Img}
                                         alt="titanium 2"
